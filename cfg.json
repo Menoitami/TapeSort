@@ -1,0 +1,6 @@
+{
+    "read_delay_ms": 10,
+    "write_delay_ms": 15,
+    "rewind_delay_ms": 100,
+    "move_delay_ms": 5
+  }
