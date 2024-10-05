@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cassert> // Подключаем заголовочный файл для assert
-#include "Tape.h"
+#include "Tape.hpp"
 
 void testEquality() {
     int a = 5;

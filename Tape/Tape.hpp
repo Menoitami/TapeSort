@@ -9,7 +9,7 @@
 
 
 
-
+namespace tape{
 
 template <std::totally_ordered T>
 class Tape {
@@ -22,35 +22,36 @@ public:
     void print();    //delete
 
 private:
-    std::list<T> data;
-    typename std::list<T>::iterator iter;
+    std::list<T> data;                     
+    std::list<T>::iterator iter;  
 
-    int read_delay_ms{};
-    int write_delay_ms{};
-    int rewind_delay_ms{};
-    int move_delay_ms{};
+    int read_delay_ms;
+    int write_delay_ms;
+    int rewind_delay_ms;
+    int move_delay_ms;         
 };
+
 
 template <std::totally_ordered T>
 Tape<T>::Tape() {
-    data = {};
-    iter = data.end();
+    data = {};                       
+    iter = data.end();             
 }
 
 
 template <std::totally_ordered T>
 T Tape<T>::read() {
-
-    return *iter;
-
+   
+    return *iter;                
+    
 }
 
 template <std::totally_ordered T>
 void Tape<T>::write(T el) {
 
-    *iter = el;
-
-
+        *iter = el;      
+   
+    
 }
 
 template <std::totally_ordered T>
@@ -89,3 +90,4 @@ void Tape<T>::print(){
 
     }
 }
+} //namespace 
